@@ -1,44 +1,107 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Starter Project utilizing CREATE-REACT-APP
 
-## Available Scripts
+## Intention
 
-In the project directory, you can run:
+- Have a go-to starter template for new react projects
+- A11y-ready
+- Eslint configuration baked-in
+- Typescript config baked-in
+- Cut down on research and configuration when starting new projects
 
-### `npm start`
+## VSCode setting reference for speedy integration
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```js
+{
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ],
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "terminal.external.windowsExec": "C:\\windows\\System32\\bash.exe",
+  "terminal.integrated.shellArgs.windows": ["-l"],
+  "workbench.colorTheme": "Electron",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "editor.fontFamily": "'Dank Mono', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "window.zoomLevel": 2,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          //following will be in italic (=FlottFlott)
+          "comment",
+          "entity.name.type.class", //class names
+          "keyword", //import, export, return…
+          "constant", //String, Number, Boolean…, this, super
+          "storage.modifier", //static keyword
+          "storage.type.class.js", //class keyword
+          "variable.parameter"
+          // "entity.name.function"
+        ],
+        "settings": {
+          "fontStyle": "Dank Mono italic"
+        }
+      },
+      {
+        "scope": [
+          //following will be excluded from italics (VSCode has some defaults for italics)
+          "invalid",
+          "keyword.operator",
+          "constant.numeric.css",
+          "keyword.other.unit.px.css",
+          "constant.numeric.decimal.js",
+          "constant.numeric.json"
+        ],
+        "settings": {
+          "fontStyle": "Dank Mono"
+        }
+      }
+    ]
+  },
+  "editor.tabSize": 2,
+  "prettier.eslintIntegration": true,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "line",
+  "editor.multiCursorMergeOverlapping": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.cursorWidth": 2,
+  "editor.minimap.renderCharacters": false,
+  "editor.renderLineHighlight": "gutter",
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "search.showLineNumbers": true,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "git.path": "C:\\Program Files\\git\\cmd\\git.exe",
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  "breadcrumbs.enabled": true,
+  "explorer.confirmDelete": false,
+  "editor.wordWrap": "on",
+  "workbench.iconTheme": "material-icon-theme"
+}
+```
